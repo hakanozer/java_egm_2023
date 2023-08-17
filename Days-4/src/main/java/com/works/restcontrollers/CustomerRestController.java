@@ -23,4 +23,9 @@ public class CustomerRestController {
         return customerService.save(customer);
     }
 
+    @PostMapping("/login")
+    public ResponseEntity login( @RequestBody Customer customer ) {
+        return customerService.login(customer);
+    }
+
 }

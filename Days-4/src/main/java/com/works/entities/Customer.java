@@ -1,5 +1,6 @@
 package com.works.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -9,6 +10,7 @@ import javax.validation.constraints.*;
 @Data
 public class Customer {
 
+    //@JsonIgnore
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long cid;
@@ -25,6 +27,7 @@ public class Customer {
     @NotNull
     @Column(unique = true, length = 150)
     private String email;
+
 
 
     @NotEmpty
