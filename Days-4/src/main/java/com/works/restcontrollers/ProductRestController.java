@@ -21,9 +21,9 @@ public class ProductRestController {
         return productService.save(product);
     }
 
-    @GetMapping("/list")
-    public ResponseEntity list() {
-        return productService.list();
+    @GetMapping("/list/{cid}/{page}")
+    public ResponseEntity list(@PathVariable long cid, @PathVariable int page) {
+        return productService.list(cid, page);
     }
 
 }
